@@ -18,14 +18,16 @@ public class AddressBook {
         return owner;
     }
 
-    public void setOwner(Person Person) {
-        this.owner = owner;
+    public void setOwner(Person person) {
+        this.owner = person;
     }
 
     public void addPerson(Person person) {
+        people.add(person);
     }
 
-    public void removePerson(Person Person) {
+    public void removePerson(Person person) {
+        people.remove(person);
     }
 
     public Person getPersonByEmail(String email) {
@@ -38,7 +40,7 @@ public class AddressBook {
     }
 
     public Boolean saveAll() {
-        return null;
+        return false;
     }
 
 }

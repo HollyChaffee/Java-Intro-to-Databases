@@ -22,59 +22,53 @@ public class AddressBookTest {
         addressBook.addPerson(person);
         addressBook.addPerson(person1);
         addressBook.addPerson(person2);
-
     }
 
     @Test
-    public void getOwner() {
-        //Given
+    public void getOwnerTest() {
         Person person = new Person("Manny", "Lion", 14, "mannylion@gmail.com");
 
-        //When
-        String expected = "Manny";
-        String actual = addressBook.getOwner().getFirstName();
-
-        //Then
-        Assert.assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void setOwner() {
-        //Given
-        Person person = new Person("Manny", "Lion", 14, "mannylion@gmail.com");
-        addressBook.setOwner(person);
-
-        //When
         Person expected = person;
         Person actual = addressBook.getOwner();
 
-        //Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void setOwnerTest() {
+        Person person = new Person("Manny", "Lion", 14, "mannylion@gmail.com");
+        addressBook.setOwner(person);
+
+        Person expected = person;
+        Person actual = addressBook.getOwner();
+
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void addPerson() {
+    public void addPersonTest() {
+        addressBook.addPerson()
 
     }
 
     @Test
-    public void removePerson() {
+    public void removePersonTest() {
 
     }
 
     @Test
-    public void getPersonByEmail() {
+    public void getPersonByEmailTest() {
 
     }
 
     @Test
-    public void getAllPeople() {
+    public void getAllPeopleTest() {
 
     }
 
     @Test
-    public void saveAll() {
+    public void saveAllTest() {
 
     }
 }
